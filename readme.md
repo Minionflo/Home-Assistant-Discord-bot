@@ -11,7 +11,7 @@ Replace ! with your prefix
 * `!light_off (entity_id without light.)` Turns the light off
 * `!switch_on (entity_id without switch.)` Turns the switch on
 * `!switch_off (entity_id without switch.)` Turns the switch off
-* `!alexa (message)` Currently in development
+* `!alexa (message)` Says message through alexa. Instalation: Look <#alexa>
 
 ## Installation
 
@@ -19,6 +19,7 @@ Replace ! with your prefix
 
 * Node.js
 * NPM
+* Alexa Media Player in Home Assistant (only if you want to use !alexa)
 
 ### Installation
 
@@ -28,3 +29,39 @@ You must go into the folder with the files and then execute the following comman
 * You must replace line 132 in /node_modules/node-homeassistant/index.js with `this.ws.send(JSON.stringify(data).replace('"[', '[').replace(']"', "]"))` for the light_on_color command to work
 * Edit config.json
 * `npm start` To start the bot
+
+### Alexa
+
+You need two helpers and one automation for !alexa to work
+
+#### Helpers
+
+1. Toggle Helper with the name: alexa_say
+2. Text Helper with the name: alexa_say
+
+#### Automation
+
+Create an automation and open the automation yaml editor and paste in the code below
+
+```alias: Alexa_Say
+description: ''
+trigger:
+  - platform: state
+    entity_id: input_boolean.alexa_say
+    to: 'on'
+condition: []
+action:
+  - service: notify.alexa_media_NAME
+    data:
+      data:
+        type: tts
+      target:
+        - media_player.NAME
+      message: '{{ states(''input_text.alexa_say'') }}'
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.alexa_say
+mode: single
+```
+
+Replace "NAME" with the name of your alexa

@@ -17,6 +17,7 @@ Replace ! with your prefix
 
 ### Requirments
 
+* [Home Assistant](https://home-assistant.io)
 * [Node.js](https://nodejs.org/en/)
 * NPM
 * [Alexa Media Player](https://github.com/custom-components/alexa_media_player) in Home Assistant (only if you want to use !alexa)

@@ -11,7 +11,7 @@ Replace ! with your prefix
 * `!light_off (entity_id without light.)` Turns the light off
 * `!switch_on (entity_id without switch.)` Turns the switch on
 * `!switch_off (entity_id without switch.)` Turns the switch off
-* `!alexa (message)` Says message through alexa. Instalation: Look <#alexa>
+* `!alexa (message)` Says message through alexa. Instalation: Look <https://github.com/Minionflo/Home-Assistant-Discord-bot#alexa>
 
 ## Installation
 
@@ -27,7 +27,7 @@ You must go into the folder with the files and then execute the following comman
 
 * `npm install` To install the Packages
 * You must replace line 132 in /node_modules/node-homeassistant/index.js with `this.ws.send(JSON.stringify(data).replace('"[', '[').replace(']"', "]"))` for the light_on_color command to work
-* Edit config.json
+* Edit `config.json`
 * `npm start` To start the bot
 
 ### Alexa

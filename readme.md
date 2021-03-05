@@ -2,7 +2,7 @@
 
 ## Commands
 
-Replace ! with your prefix
+Replace ! with your prefix \n
 () = Required   [] = Optional
 
 * `!state (entity_id)` Shows the state of the entity

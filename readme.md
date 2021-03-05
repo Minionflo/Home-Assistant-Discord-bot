@@ -19,7 +19,7 @@ Replace ! with your prefix
 
 * Node.js
 * NPM
-* Alexa Media Player in Home Assistant (only if you want to use !alexa)
+* [Alexa Media Player in Home Assistant](https://github.com/custom-components/alexa_media_player) (only if you want to use !alexa)
 
 ### Installation
 

@@ -1,0 +1,12 @@
+{
+    "dc_token": "Your Bot Token",
+    "dc_owner": "Your Discord ID",
+    "dc_status": "Status of the bot",
+    "dc_statustype": "PLAYING, STREAMING, LISTENING or WATCHING",
+    "dc_prefix": "!",
+    "dc_channel": "The Channel to listen to",
+    "ha_token": "Home Assistant Live time Token",
+    "ha_host": "Your Home Assistant IP/Domain",
+    "ha_port": "Your Home Assistant Port",
+    "ha_protocol": "ws for http and wss for https"
+}

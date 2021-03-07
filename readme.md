@@ -11,7 +11,7 @@ Replace ! with your prefix
 * `!light_off (entity_id without light.)` Turns the light off
 * `!switch_on (entity_id without switch.)` Turns the switch on
 * `!switch_off (entity_id without switch.)` Turns the switch off
-* `!alexa (message)` Says message through alexa. Instalation: Look [Alexa](https://github.com/Minionflo/Home-Assistant-Discord-bot#alexa)
+* `!alexa (message)` Says message through alexa. Installation: Look [Alexa](https://github.com/Minionflo/Home-Assistant-Discord-bot#alexa)
 
 ## Installation
 
